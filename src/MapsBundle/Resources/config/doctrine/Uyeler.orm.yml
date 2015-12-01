@@ -1,0 +1,59 @@
+MapsBundle\Entity\Uyeler:
+    type: entity
+    repositoryClass: MapsBundle\Entity\UyelerRepository
+    table: uyeler        
+    indexes:
+        uyeID:
+            columns:
+                - uyeID
+    id:
+        uyeid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: uyeID
+            generator:
+                strategy: IDENTITY
+    fields:
+        uyeadi:
+            type: string
+            nullable: false
+            length: 75
+            options:
+                fixed: false
+            column: uyeAdi
+        uyesoyadi:
+            type: string
+            nullable: false
+            length: 75
+            options:
+                fixed: false
+            column: uyeSoyadi
+        uyerumuz:
+            type: string
+            nullable: false
+            length: 75
+            options:
+                fixed: false
+            column: uyeRumuz
+        uyeeposta:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: uyeEposta
+        uyesifre:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: uyeSifre
+        uyetarih:
+            type: datetime
+            nullable: false
+            column: uyeTarih
+    lifecycleCallbacks: {  }

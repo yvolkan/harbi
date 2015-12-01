@@ -1,0 +1,200 @@
+<?php
+
+namespace MapsBundle\Entity;
+
+/**
+ * Uyeler
+ */
+class Uyeler
+{
+    /**
+     * @var integer
+     */
+    private $uyeid;
+
+    /**
+     * @var string
+     */
+    private $uyeadi;
+
+    /**
+     * @var string
+     */
+    private $uyesoyadi;
+
+    /**
+     * @var string
+     */
+    private $uyerumuz;
+
+    /**
+     * @var string
+     */
+    private $uyeeposta;
+
+    /**
+     * @var string
+     */
+    private $uyesifre;
+
+    /**
+     * @var \DateTime
+     */
+    private $uyetarih;
+
+
+    /**
+     * Get uyeid
+     *
+     * @return integer
+     */
+    public function getUyeid()
+    {
+        return $this->uyeid;
+    }
+
+    /**
+     * Set uyeadi
+     *
+     * @param string $uyeadi
+     *
+     * @return Uyeler
+     */
+    public function setUyeadi($uyeadi)
+    {
+        $this->uyeadi = $uyeadi;
+
+        return $this;
+    }
+
+    /**
+     * Get uyeadi
+     *
+     * @return string
+     */
+    public function getUyeadi()
+    {
+        return $this->uyeadi;
+    }
+
+    /**
+     * Set uyesoyadi
+     *
+     * @param string $uyesoyadi
+     *
+     * @return Uyeler
+     */
+    public function setUyesoyadi($uyesoyadi)
+    {
+        $this->uyesoyadi = $uyesoyadi;
+
+        return $this;
+    }
+
+    /**
+     * Get uyesoyadi
+     *
+     * @return string
+     */
+    public function getUyesoyadi()
+    {
+        return $this->uyesoyadi;
+    }
+
+    /**
+     * Set uyerumuz
+     *
+     * @param string $uyerumuz
+     *
+     * @return Uyeler
+     */
+    public function setUyerumuz($uyerumuz)
+    {
+        $this->uyerumuz = $uyerumuz;
+
+        return $this;
+    }
+
+    /**
+     * Get uyerumuz
+     *
+     * @return string
+     */
+    public function getUyerumuz()
+    {
+        return $this->uyerumuz;
+    }
+
+    /**
+     * Set uyeeposta
+     *
+     * @param string $uyeeposta
+     *
+     * @return Uyeler
+     */
+    public function setUyeeposta($uyeeposta)
+    {
+        $this->uyeeposta = $uyeeposta;
+
+        return $this;
+    }
+
+    /**
+     * Get uyeeposta
+     *
+     * @return string
+     */
+    public function getUyeeposta()
+    {
+        return $this->uyeeposta;
+    }
+
+    /**
+     * Set uyesifre
+     *
+     * @param string $uyesifre
+     *
+     * @return Uyeler
+     */
+    public function setUyesifre($uyesifre)
+    {
+        $this->uyesifre = $uyesifre;
+
+        return $this;
+    }
+
+    /**
+     * Get uyesifre
+     *
+     * @return string
+     */
+    public function getUyesifre()
+    {
+        return $this->uyesifre;
+    }
+
+    /**
+     * Set uyetarih
+     *
+     * @param \DateTime $uyetarih
+     *
+     * @return Uyeler
+     */
+    public function setUyetarih($uyetarih)
+    {
+        $this->uyetarih = $uyetarih;
+
+        return $this;
+    }
+
+    /**
+     * Get uyetarih
+     *
+     * @return \DateTime
+     */
+    public function getUyetarih()
+    {
+        return $this->uyetarih;
+    }
+}
+

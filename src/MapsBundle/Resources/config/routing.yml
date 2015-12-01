@@ -1,0 +1,11 @@
+maps_homepage:
+    path:     /
+    defaults: { _controller: MapsBundle:Default:index }
+    
+maps_profile:
+    path:     /profil
+    defaults: { _controller: MapsBundle:Member:profile }
+    
+maps_profile_request:
+    path:     /request/{id}
+    defaults: { _controller: MapsBundle:Member:profile, id: null  }    

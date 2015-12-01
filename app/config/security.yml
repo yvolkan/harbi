@@ -1,0 +1,41 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    
+    encoders:        
+        MapsBundle\Entity\Uyeler: plaintext
+    
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        our_db_provider:
+            entity:
+                class: MapsBundle:Uyeler
+                #property: uyeEposta
+                # if you're using multiple entity managers
+                # manager_name: customer
+            
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_ADMIN }
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        login_firewall:
+            pattern:   ^/login$
+            anonymous: ~
+        secured_area:
+            pattern:    ^/
+            form_login: ~
+            logout:
+                path:   /logout
+                target: /
+                invalidate_session: false                
+        default:
+            anonymous: ~
+            http_basic: ~
+            provider: our_db_provider
+            form_login:
+                login_path: /login
+                check_path: /login_check
